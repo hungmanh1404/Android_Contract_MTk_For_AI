@@ -69,6 +69,17 @@ Nếu thiếu thông tin nhỏ, AI được phép đưa ra giả định hợp l
 
 ---
 
+## thiết kế giao diện. Quy tắc sử dụng resource khi thiết kế giao diện
+- Khi thiết kế giao diện bằng XML hoặc Fragment, không được hardcode màu sắc, kích thước, khoảng cách, margin, padding, textSize, cornerRadius, v.v.
+
+- Trước khi tạo resource mới, phải kiểm tra và ưu tiên tái sử dụng resource đã có trong ứng dụng.
+- Màu sắc phải được khai báo và sử dụng từ:
+app/src/main/res/values/colors.xml
+- Kích thước và khoảng cách phải được khai báo và sử dụng từ:
+app/src/main/res/values/dimens.xml
+- Nếu chưa có giá trị phù hợp, hãy tạo resource mới với tên rõ ràng, đúng quy ước của dự án.
+- Không khai báo trực tiếp các giá trị như #FFFFFF, 16dp, 14sp trong XML hoặc code Kotlin.
+
 ## 3. Cấu trúc feature mặc định
 
 ```text
